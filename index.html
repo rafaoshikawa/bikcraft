@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikcraft</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+ <header class="header">
+
+ <a href="/"><img src="./img/bikcraft.svg" alt="Logo Bikcraft" id="logo-site"></a> 
+
+  <nav aria-label="primária" class="nav">
+    <ul class="nav-items">
+      <li><a href="/" class="navbtn" >sobre</a></li>
+      <li><a href="/" class="navbtn">produto</a></li>
+      <li><a href="/" class="navbtn">loja</a></li>
+      <li><a href="/" class="navbtn">contato</a></li>
+      <li><a href="./darkmode.html" class="navbtn">Modo Escuro</a></li>
+    </ul>
+  </nav>
+ </header>
+
+ <main>
+ <article class="content" aria-labelledby="label-introducao" > <!-- essa aria-labelledby é só para semantantica -->
+  <div class="first-content">
+    <h1 class=>Bicicletas Feitas a Mão</h1>
+    <p >A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios da marca.</p>
+    <a href="/" class="btn-vermais">ver mais</a>
+  </div> <!-- essa div serve pra mandar o first content tudo dentro de um "sub containerzinho", assim eu consigo estilizar e centralizar -->
+  <img src="./img/bicicleta.jpg" alt="bicicleta Bikcraft" class="second-content">
+ </article>
+
+ <article class="content" aria-labelledby="label-vantagens" > <!-- essa aria-labelledby é só para semantantica -->
+  <h2 class="third-content" id="label-vantagens">Vantagens Bikcraft</h2>
+
+
+  <!-- CRIEI UMA LISTA PARA AS VANTAGENS, E USEI A UL PARA ARMAZENAR OS ELEMENTOS TUDO DENTRO DELA, MAS A ESTLIZAÇAO VAI OCORRER
+  DENTRO DAS LI'S, A UL SÓ SERVE PRA MANTER OS ELEMENTOS DENTRO DELA -->
+
+  <ul class="aspects">
+    <li class="aspects-items">
+      <img src="./img/eletrica.svg" alt="">
+      <h3>Motor Elétrico</h3>
+      <p>Permite você viajar distâncias inimaginaveis com a sua bike.</p>
+    </li>
+    <li class="aspects-items">
+      <img src="./img/velocidade.svg" alt="">
+      <h3>40 km/h</h3>
+      <p>A mais rápida bicicleta elétrica disponível hoje no mercado.</p>
+    </li>
+    <li class="aspects-items">
+      <img src="./img/rastreador.svg" alt="">
+      <h3>Rastreador</h3>
+      <p>Rastreador e sistema anti-furto para garantir o seu sossego.</p>
+    </li>
+ </article>
+</main>
+
+
+<footer class="footer">
+  <p>Bikcraft. Alguns Direitos Reservados.</p>
+</footer>
+
+</body>
+</html>

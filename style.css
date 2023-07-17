@@ -1,0 +1,351 @@
+body, html {
+  overflow-x: hidden!important;
+  }
+
+
+body{
+  position: relative;
+  margin: 0px;
+  margin-top: 60px;
+  display: grid;
+  gap: 60px;
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-items: center;
+  /* resetei as margins e os paddings dei um gap de 60px pra baixo e uma margin de 60px pra cima
+  transformei em grid para conseguir justificar todos os items (elementos) adicionandos depois
+  ao centro */
+}
+
+/* resetando as tags para nao terem nenhum estilo padrão */
+img{
+  display: block;
+}
+a{
+  text-decoration: none;
+}
+
+ul, li{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h3, p{
+  margin: 0px;
+ }
+
+article{
+  margin: 0px;
+}
+
+p{
+  font-size: 1.25rem;
+
+}
+
+
+/* usei essas tags na header para alinhar os conteudos ao centro de forma igual e com espaçamentos */
+.header {
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+}
+
+/* nav-items é o conteudo que tem dentro da UL, sendo assim transformei tudo em flex, flex wrap pra ir quebrando conforme a tela é 
+redimensionadam gap para espaçamentos e justifiquei o conteudo ao centro*/
+.nav-items{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* estilização padrao dos botoes, com cores de fundo bordas arredondadas e um detalhe de border para a transformação do hover depois */
+.nav-items .navbtn{
+  display: block;
+  background: #ffff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  color: #000;
+  text-transform: uppercase;
+  border: 2px solid #fff; /* ja transformei a borda dos botoes aqui, pq seu aplicasse bordas solidas no hover os botoes iam crescer 
+  e parecer que estao se movendo */
+}
+
+/* aqui eu só apliquei a cor da borda e a unica que coisa que muda quando passamos o hover em cima é a mudança 
+  da cor da borda, assim os botoes nao parecem crescer ou se mover, se não entendeu, experimenta apagar o border do (nav-items a) e adiciona
+  ele aqui pra voce entender a mudança*/
+.nav-items a:hover{
+  border-color: #e21;  
+}
+
+/* estilização padrao, grid para determinar grids de 1fr 1fr e um altura padrao de 1000px */
+.content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+}
+
+/* PRIMEIRO CONTEUDO */
+
+/* text align right para alinhar tudo a direita positiion relative para aplicar o pseudoelemento vermelho depois como absoluto
+align contet center para comprimir os itens ao centro e nao gerar aquele espaçamento grande, gapzinho de 10px e justify items end
+para o botao nao ficar do tamanho total da grid.  */
+.first-content {
+  display: grid;
+  background: #fff;
+  gap: 20px;
+  padding: 40px;
+  text-align: right;
+  position: relative;
+  align-content: center;
+  justify-items: end;
+}
+
+/* aplicaçao do pseudoelemento vermelho, positition absolute e estilizaçoes padroes, cores e tamanhos. */
+.first-content::before{
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: -30px;
+  width: 60px;
+  height: 4px;
+  background-color: #e21;
+}
+
+.first-content h1{
+  font-size: 2rem;
+  margin: 0px;
+}
+
+.first-content p{
+  line-height: 1.3;
+}
+
+.btn-vermais {
+  background: #e21;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.btn-vermais:hover{
+  background: #900;
+}
+
+
+
+
+/* SEGUNDO CONTEUDO */
+.second-content{
+  display: block; /* display BLOCK pq img é tag inline e precisamos que ela seja display BLOCK pra ficar certinha dentro do container */
+  max-width: 100%; /* max width pra img ter um tamanho total de 100% da sua grid */
+}
+
+
+/* TERCEIRO CONTEUDO */
+.third-content{
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #c6c6c6;
+  text-align: right;
+  align-self: center;
+  padding: 40px;
+  background-image: url(./img/onda.svg);
+}
+
+
+
+
+/* QUARTO CONTEUDO */
+/* no container que vai manter os elementos dentro (ul = aspects) eu só mudei só a cor do container que vai conter os itens da UL e dei um 
+padding para desgrudar */
+.aspects{
+  background: #fff;
+  padding: 40px;
+}
+
+/* aspects-item = li's aqui começa a magica, transformei as li's em grid, determinei 2 grid 1 auto e 1fr, gap para desgrudas os icones e os textos e 
+adicionei um border left pra dar aquela animaçaozinha do hover depois, deixei essa borda com transparencia pra aparecer
+somente quando eu passar o mouse em cima */
+.aspects-items{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+}
+
+/* hoverzinho padrao, detalhe, eu pintei  BORDA e nao o BACKGROUND */
+.aspects-items:hover{
+  border-color: #e21;
+}
+ 
+/* mandei todos os itens p que esta dentro da li aspects-item para a coluna 2, assim fica icones na coluna 1 e textos na coluna 2
+SIMPLES SIMPLES */
+.aspects-items p{
+  grid-column: 2;
+}
+
+/* chamei denovo a li aspects-item pra estilizar ela com um background cinza somente as listas impares */
+.aspects-items:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+.footer{
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+
+
+/* media query RESPONSIVO */
+
+/* TABLETS   */
+
+@media(max-width:900px){
+
+  h1{
+    font-size: 0.8rem;
+  }
+  
+  p{
+    font-size: 1.2rem;
+  }
+
+  .nav-items a{
+    background: #ffff;
+    padding: 15px 33px;
+    border-radius: 5px;
+    color: #000;
+    text-transform: uppercase;
+  }
+
+  .content{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+
+  }
+
+  .first-content {
+    display: grid;
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .first-content::before{
+    content: none;
+  }
+
+  .second-content{
+    margin-bottom: 20px;
+  }
+
+  .third-content{
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+  }  
+}
+
+@media(max-width:750px){
+
+  .nav-items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .nav-items a{
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+
+  .content{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 490px;
+
+  }
+
+  .first-content {
+    display: grid;
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .nav-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    
+  }
+
+  .content{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 450px;
+
+  }
+
+  .first-content {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .third-content{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+  } 
+
+
+}
+
+
+@media(max-width:500px){
+
+  p{
+    font-size: 1rem;
+  }
+
+  .content{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 400px;
+
+  }
+
+  .third-content{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+
+}
+
+
