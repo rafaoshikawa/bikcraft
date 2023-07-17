@@ -1,9 +1,9 @@
-body, html {
-  overflow-x: hidden!important;
-  }
+body,
+html {
+  overflow-x: hidden !important;
+}
 
-
-body{
+body {
   position: relative;
   margin: 0px;
   margin-top: 60px;
@@ -18,32 +18,33 @@ body{
 }
 
 /* resetando as tags para nao terem nenhum estilo padrão */
-img{
+img {
   display: block;
 }
-a{
+a {
   text-decoration: none;
 }
 
-ul, li{
+ul,
+li {
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
 
-h1, h3, p{
-  margin: 0px;
- }
-
-article{
+h1,
+h3,
+p {
   margin: 0px;
 }
 
-p{
+article {
+  margin: 0px;
+}
+
+p {
   font-size: 1.25rem;
-
 }
-
 
 /* usei essas tags na header para alinhar os conteudos ao centro de forma igual e com espaçamentos */
 .header {
@@ -54,7 +55,7 @@ p{
 
 /* nav-items é o conteudo que tem dentro da UL, sendo assim transformei tudo em flex, flex wrap pra ir quebrando conforme a tela é 
 redimensionadam gap para espaçamentos e justifiquei o conteudo ao centro*/
-.nav-items{
+.nav-items {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -62,7 +63,7 @@ redimensionadam gap para espaçamentos e justifiquei o conteudo ao centro*/
 }
 
 /* estilização padrao dos botoes, com cores de fundo bordas arredondadas e um detalhe de border para a transformação do hover depois */
-.nav-items .navbtn{
+.nav-items .navbtn {
   display: block;
   background: #ffff;
   padding: 15px 40px;
@@ -76,12 +77,12 @@ redimensionadam gap para espaçamentos e justifiquei o conteudo ao centro*/
 /* aqui eu só apliquei a cor da borda e a unica que coisa que muda quando passamos o hover em cima é a mudança 
   da cor da borda, assim os botoes nao parecem crescer ou se mover, se não entendeu, experimenta apagar o border do (nav-items a) e adiciona
   ele aqui pra voce entender a mudança*/
-.nav-items a:hover{
-  border-color: #e21;  
+.nav-items a:hover {
+  border-color: #e21;
 }
 
 /* estilização padrao, grid para determinar grids de 1fr 1fr e um altura padrao de 1000px */
-.content{
+.content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1000px;
@@ -104,7 +105,7 @@ para o botao nao ficar do tamanho total da grid.  */
 }
 
 /* aplicaçao do pseudoelemento vermelho, positition absolute e estilizaçoes padroes, cores e tamanhos. */
-.first-content::before{
+.first-content::before {
   content: "";
   position: absolute;
   top: 30px;
@@ -114,12 +115,12 @@ para o botao nao ficar do tamanho total da grid.  */
   background-color: #e21;
 }
 
-.first-content h1{
+.first-content h1 {
   font-size: 2rem;
   margin: 0px;
 }
 
-.first-content p{
+.first-content p {
   line-height: 1.3;
 }
 
@@ -131,22 +132,18 @@ para o botao nao ficar do tamanho total da grid.  */
   text-transform: uppercase;
 }
 
-.btn-vermais:hover{
+.btn-vermais:hover {
   background: #900;
 }
 
-
-
-
 /* SEGUNDO CONTEUDO */
-.second-content{
+.second-content {
   display: block; /* display BLOCK pq img é tag inline e precisamos que ela seja display BLOCK pra ficar certinha dentro do container */
   max-width: 100%; /* max width pra img ter um tamanho total de 100% da sua grid */
 }
 
-
 /* TERCEIRO CONTEUDO */
-.third-content{
+.third-content {
   font-size: 4rem;
   text-transform: uppercase;
   color: #c6c6c6;
@@ -156,13 +153,10 @@ para o botao nao ficar do tamanho total da grid.  */
   background-image: url(./img/onda.svg);
 }
 
-
-
-
 /* QUARTO CONTEUDO */
 /* no container que vai manter os elementos dentro (ul = aspects) eu só mudei só a cor do container que vai conter os itens da UL e dei um 
 padding para desgrudar */
-.aspects{
+.aspects {
   background: #fff;
   padding: 40px;
 }
@@ -170,7 +164,7 @@ padding para desgrudar */
 /* aspects-item = li's aqui começa a magica, transformei as li's em grid, determinei 2 grid 1 auto e 1fr, gap para desgrudas os icones e os textos e 
 adicionei um border left pra dar aquela animaçaozinha do hover depois, deixei essa borda com transparencia pra aparecer
 somente quando eu passar o mouse em cima */
-.aspects-items{
+.aspects-items {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px 20px;
@@ -179,13 +173,13 @@ somente quando eu passar o mouse em cima */
 }
 
 /* hoverzinho padrao, detalhe, eu pintei  BORDA e nao o BACKGROUND */
-.aspects-items:hover{
+.aspects-items:hover {
   border-color: #e21;
 }
- 
+
 /* mandei todos os itens p que esta dentro da li aspects-item para a coluna 2, assim fica icones na coluna 1 e textos na coluna 2
 SIMPLES SIMPLES */
-.aspects-items p{
+.aspects-items p {
   grid-column: 2;
 }
 
@@ -194,7 +188,7 @@ SIMPLES SIMPLES */
   background: #f7f7f7;
 }
 
-.footer{
+.footer {
   width: 100vw;
   background: #fff;
   display: flex;
@@ -202,23 +196,23 @@ SIMPLES SIMPLES */
   padding: 30px;
 }
 
-
-
 /* media query RESPONSIVO */
 
 /* TABLETS   */
 
-@media(max-width:900px){
-
-  h1{
+@media (max-width: 900px) {
+  body {
+    justify-content: center;
+  }
+  h1 {
     font-size: 0.8rem;
   }
-  
-  p{
+
+  p {
     font-size: 1.2rem;
   }
 
-  .nav-items a{
+  .nav-items a {
     background: #ffff;
     padding: 15px 33px;
     border-radius: 5px;
@@ -226,11 +220,10 @@ SIMPLES SIMPLES */
     text-transform: uppercase;
   }
 
-  .content{
+  .content {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 600px;
-
   }
 
   .first-content {
@@ -242,40 +235,38 @@ SIMPLES SIMPLES */
     justify-items: center;
   }
 
-  .first-content::before{
+  .first-content::before {
     content: none;
   }
 
-  .second-content{
+  .second-content {
     margin-bottom: 20px;
   }
 
-  .third-content{
+  .third-content {
     text-align: center;
     font-size: 2.8rem;
     font-weight: 700;
-  }  
+  }
 }
 
-@media(max-width:750px){
-
-  .nav-items{
+@media (max-width: 750px) {
+  .nav-items {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
   }
 
-  .nav-items a{
+  .nav-items a {
     font-size: 1rem;
     padding: 15px 20px;
   }
 
-  .content{
+  .content {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 490px;
-
   }
 
   .first-content {
@@ -286,25 +277,21 @@ SIMPLES SIMPLES */
     align-content: center;
     justify-items: center;
   }
-
 }
 
-@media(max-width:600px){
-
-  .nav-items{
+@media (max-width: 600px) {
+  .nav-items {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    
   }
 
-  .content{
+  .content {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 450px;
-
   }
 
   .first-content {
@@ -316,36 +303,27 @@ SIMPLES SIMPLES */
     justify-items: center;
   }
 
-  .third-content{
+  .third-content {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
-  } 
-
-
+  }
 }
 
-
-@media(max-width:500px){
-
-  p{
+@media (max-width: 500px) {
+  p {
     font-size: 1rem;
   }
 
-  .content{
+  .content {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 400px;
-
   }
 
-  .third-content{
+  .third-content {
     text-align: center;
     font-size: 1.4rem;
     font-weight: 700;
   }
-
-
 }
-
-
